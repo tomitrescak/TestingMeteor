@@ -95,10 +95,13 @@
             spyOn(Tutorials, "findOne").andReturn({capacity: 2, currentCapacity: 1});
             spyOn(TutorialRegistrations, "findOne").andReturn(null);
             spyOn(TutorialRegistrations, "insert");
+            spyOn(Tutorials, "update");
 
             Meteor.methodMap.registerForTutorial("1");
 
             expect(TutorialRegistrations.insert).toHaveBeenCalledWith({tutorialId: "1", userId: "2"});
+            expect(Tutorials.update).toHaveBeenCalledWith("1", {$set: { currentCapacity: 2}});
+
         });
 
         it("should not be possible to de-register if registration not present", function() {
@@ -110,10 +113,13 @@
             spyOn(Meteor, "userId").andReturn("2");
             spyOn(TutorialRegistrations, "findOne").andReturn({});
             spyOn(TutorialRegistrations, "remove");
+            spyOn(Tutorials, "findOne").andReturn({capacity: 2, currentCapacity: 1});
+            spyOn(Tutorials, "update");
 
             Meteor.methodMap.removeRegistration("1");
 
             expect(TutorialRegistrations.remove).toHaveBeenCalledWith({tutorialId: "1", userId: "2"});
+            expect(Tutorials.update).toHaveBeenCalledWith("1", {$set: { currentCapacity: 0}});
         });
     });
 })();
