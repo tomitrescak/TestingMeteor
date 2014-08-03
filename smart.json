@@ -1,0 +1,13 @@
+{
+  "packages": {
+    "iron-router": {},
+    "roles": {},
+    "jasmine-unit": {},
+    "jasmine": {},
+    "velocity-html-reporter": {},
+    "mocha-web-velocity": {},
+    "spin": {},
+    "bootstrap-3": {},
+    "accounts-ui-bs3-and-blaze": {}
+  }
+}
