@@ -10,7 +10,8 @@
       "mocha-web-velocity": {},
       "spin": {},
       "bootstrap-3": {},
-      "accounts-ui-bs3-and-blaze": {}
+      "accounts-ui-bs3-and-blaze": {},
+      "selenium-nightwatch": {}
     },
     "packages": {
       "iron-router": {
@@ -57,6 +58,11 @@
         "git": "https://github.com/jzgoda/meteor-accounts-ui-bootstrap-3-and-blaze",
         "tag": "v0.4.2",
         "commit": "311530aecf2e9af74d990140c7f6d072077b679c"
+      },
+      "selenium-nightwatch": {
+        "git": "https://github.com/awatson1978/selenium-nightwatch.git",
+        "tag": "v0.3.3",
+        "commit": "026bb6ec3b3c99efcaf5e9262c904dcb04b6bdf8"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

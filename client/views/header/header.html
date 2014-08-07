@@ -2,7 +2,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{pathFor 'introduction'}}">The Great Clara</a>
+                <a class="navbar-brand" href="{{pathFor 'introduction'}}">BDD Tutorial</a>
             </div>
 
             <div class="navbar-collapse collapse">
@@ -14,7 +14,7 @@
                         <li><a class="brand" href="{{pathFor 'tutorials'}}" id="tutorialsLink">Tutorials</a></li>
                     {{/if}}
                     {{#if isInRole 'admin'}}
-                        <li><a class="brand" href="{{pathFor 'admin'}}" id="adminLink">Administration</a></li>
+                        <li><a class="brand" href="{{pathFor 'createTutorial'}}" id="adminLink">Administration</a></li>
                     {{/if}}
                 </ul>
             </div>
